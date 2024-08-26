@@ -213,7 +213,7 @@ int queue_pop(struct Queue * const q, struct QueueData * const d) {
 
 int queue_count(struct Queue * const q, int64_t * const countp) {
 	assert(q != NULL);
-	assert(count != NULL);
+	assert(countp != NULL);
 	if (NULL == q->readItr) {
 		q->readItr= leveldb_create_iterator(q->db,q->rop);
 	}
